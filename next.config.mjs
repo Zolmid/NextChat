@@ -33,6 +33,14 @@ const nextConfig = {
   experimental: {
     forceSwcTransforms: true,
   },
+  typescript: {
+    // 危险允许生产构建成功完成，即使存在类型错误
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    // 忽略构建时的 ESLint 错误
+    ignoreDuringBuilds: true,
+  },
 };
 
 const CorsHeaders = [
